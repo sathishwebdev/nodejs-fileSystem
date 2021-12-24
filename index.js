@@ -64,7 +64,7 @@ res.send(result)
 // homepage
 
 app.get('/', (req, res)=>{
-    fs.readFile('README.md','utf-8', (err, data)=>{
+    fs.readFile('index.html','utf-8', (err, data)=>{
         err? res.send(err) : res.send(data)
     })
 })

@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8080 // assign port
 app.use(express.json()) // make all request send from this server as json
 
 // to create a file
-app.post('/create-file', (req, res)=> {
+app.get('/create-file', (req, res)=> {
     
     // data of date time
 
@@ -60,5 +60,13 @@ res.send(result)
 
 //     })
 // })
+
+// homepage
+
+app.get('/', (req, res)=>{
+    fs.readFile('README.md','utf-8', (err, data)=>{
+        err? res.send(err) : res.send(data)
+    })
+})
 
 app.listen(PORT, ()=> console.log("Server started in port " + PORT))

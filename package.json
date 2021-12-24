@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-filesystem",
+  "version": "1.0.0",
+  "description": "create a endpoint which create a file in a folder and endpoint for retrieve all the files from the folder.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "test nodefs"
+  },
+  "keywords": [
+    "node",
+    "fs",
+    "example"
+  ],
+  "author": "Sathish kumar S",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}

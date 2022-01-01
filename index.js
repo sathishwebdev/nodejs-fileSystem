@@ -12,16 +12,16 @@ app.get('/create-file', (req, res)=> {
     
     // data of date time
 
-    let dateString = new Date().toLocaleDateString()
-    dateString = dateString.split('/')
+    let dateString = new Date().toLocaleDateString() // get date string
+    dateString = dateString.split('/') 
     let date = dateString.join('-')
-    let time = new Date().toLocaleTimeString(); 
+    let time = new Date().toLocaleTimeString();  // get time string
     time=time.split(':')
     time=time.join('-')
     time=time.split(' ')
     time=time.join('-')
     let fileName = `${date}-${time}`
-    let timeStamp = new Date().getTime()
+    let timeStamp = new Date().getTime() // get current timestamp
 
     // console.log(fileName, timeStamp)
 
@@ -38,7 +38,7 @@ app.get('/create-file', (req, res)=> {
 //  get files 
 
 app.get('/files', (req, res)=>{
-let filenames = fs.readdirSync('files');  
+let filenames = fs.readdirSync('files');  // folder name || location of the files
 let result = []
 filenames.forEach(file => {
 let data = {
